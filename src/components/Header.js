@@ -1,8 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-const Header = styled.div`
+const Header = styled.header`
   width: 100%;
   height: 700px;
   position: relative;
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   background-color: ${(props) => props.bgColor};
   color: ${(props) => props.color};
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  padding: 0 20px;
+  box-shadow: ${(props) => props.shadow};
   position: fixed;
   left: 0;
   top: 0;
@@ -35,16 +35,15 @@ const Wrapper = styled.div`
   z-index: 2;
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 70px;
-    max-width: 960px;
     margin: 0 auto;
   }
 `;
 const Title = styled.h1`
   font-size: 24px;
-  font-weight: 700px;
+  font-weight: 900;
   cursor: pointer;
 `;
 const List = styled.ul`
@@ -65,7 +64,7 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 960px;
+  max-width: 1024px;
   margin: 0 auto;
   color: white;
 `;
@@ -84,33 +83,44 @@ const ContentDescription = styled.p`
   z-index: 1;
 `;
 
-export default () => {
-  const [scroll, setScroll] = useState(0);
-
-  const handleScroll = () => {
-    setScroll(window.scrollY);
-  };
-
-  const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
+export default ({ scroll }) => {
   return (
     <Header>
       <Cover />
       <Wrapper
-        bgColor={scroll > 150 ? "white" : "inherit"}
-        color={scroll > 150 ? "black" : "white"}>
+        bgColor={scroll > 200 ? "white" : "inherit"}
+        color={scroll > 200 ? "black" : "white"}
+        shadow={
+          scroll > 200 ? "rgba(33, 35, 38, 0.3) 0px 10px 10px -10px" : "none"
+        }>
         <nav>
-          <Title onClick={scrollTop}>Denev's Portfolio</Title>
+          <Title
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            Denev's Portfolio
+          </Title>
           <List>
-            <Item>About</Item>
-            <Item>Skills</Item>
-            <Item>Archiving</Item>
-            <Item>Project</Item>
+            <Item
+              onClick={() => window.scrollTo({ top: 630, behavior: "smooth" })}>
+              Skills
+            </Item>
+            <Item
+              onClick={() =>
+                window.scrollTo({ top: 1305, behavior: "smooth" })
+              }>
+              Bootcamp
+            </Item>
+            <Item
+              onClick={() =>
+                window.scrollTo({ top: 2033, behavior: "smooth" })
+              }>
+              Project
+            </Item>
+            <Item
+              onClick={() =>
+                window.scrollTo({ top: 5489, behavior: "smooth" })
+              }>
+              About
+            </Item>
           </List>
         </nav>
       </Wrapper>

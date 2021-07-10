@@ -9,7 +9,7 @@ const Container = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 50px 0;
   background-color: #222222;
   color: #fff;
 `;
