@@ -77,6 +77,8 @@ const SubInfo = styled.div`
 
 const Description = styled.p`
   flex: 1;
+  line-height: 1.4;
+  font-size: 18px;
 `;
 
 const SubWrapper = styled.div`
@@ -120,7 +122,11 @@ const Project = () => {
               </Slider>
             </ImageContainer>
             <SubItem>
-              <Description>설명</Description>
+              <Description>
+                Nomadcoders에서 진행한 카카오톡 클론 코드 챌린지 프로젝트 완성
+                사이트로 실제적으로 친구 추가, 채팅 기능 등이 없는 순수한 HTML,
+                CSS 사이트입니다.
+              </Description>
               <SubWrapper>
                 <SubInfo>
                   <SubInfoTitle>
@@ -175,7 +181,12 @@ const Project = () => {
               </Slider>
             </ImageContainer>
             <SubItem>
-              <Description>설명</Description>
+              <Description>
+                Nomadcoders에서 진행한 Vanilla Javascript 코드 챌린지 프로젝트
+                완성 사이트로 순수 자바스크립트를 이용하여 사용자 이름, 할일
+                목록을 local storage에 저장 기능 구현하였고 openweather API를
+                사용하여 현재 위치의 날씨를 구현하였습니다.
+              </Description>
               <SubWrapper>
                 <SubInfo>
                   <SubInfoTitle>
@@ -232,7 +243,12 @@ const Project = () => {
               </Slider>
             </ImageContainer>
             <SubItem>
-              <Description>설명</Description>
+              <Description>
+                Nomadcoders에서 진행한 Youtube 클론 코드 챌린지 프로젝트 완성
+                사이트로 MongoDB를 이용하여 회원 가입, 로그인, 비디오 업로드,
+                비디오 정보 수정 등 CRUD 기능을 구현하였고, custom API를 통해
+                조회수, 댓글 업데이트 기능을 구현하였습니다.
+              </Description>
               <SubWrapper>
                 <SubInfo>
                   <SubInfoTitle>
@@ -290,7 +306,11 @@ const Project = () => {
               </Slider>
             </ImageContainer>
             <SubItem>
-              <Description>설명</Description>
+              <Description>
+                Nomadcoders에서 진행한 ReactJS 코드 챌린지 프로젝트 완성
+                사이트로 API를 사용하여 영화 정보를 받아오고 Class형 컴포넌트로
+                페이지를 구현하였습니다.
+              </Description>
               <SubWrapper>
                 <SubInfo>
                   <SubInfoTitle>
@@ -344,7 +364,11 @@ const Project = () => {
               </Slider>
             </ImageContainer>
             <SubItem>
-              <Description>설명</Description>
+              <Description>
+                패스트 캠퍼스 프론트엔드 올인원 패키지 과정으로 HTML, CSS,
+                Javascript를 이용하여 만든 GitHub 메인 페이지를 클론
+                코딩하였습니다.
+              </Description>
               <SubWrapper>
                 <SubInfo>
                   <SubInfoTitle>
@@ -388,7 +412,7 @@ const Project = () => {
         </Item>
         <Item>
           <Title>Starbucks 메인 페이지 클론</Title>
-          <GenYear>2021.4</GenYear>
+          <GenYear>2021.5</GenYear>
           <Info>
             <ImageContainer>
               <Slider {...settings}>
@@ -400,7 +424,11 @@ const Project = () => {
               </Slider>
             </ImageContainer>
             <SubItem>
-              <Description>설명</Description>
+              <Description>
+                패스트 캠퍼스 프론트엔드 초격차 패키지 과정으로 HTML, CSS,
+                Javascript를 이용하여 만든 Starbucks 메인 페이지를 클론
+                코딩하였습니다.
+              </Description>
               <SubWrapper>
                 <SubInfo>
                   <SubInfoTitle>
